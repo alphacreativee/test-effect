@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>No name</title>
+    <!-- import favicon -->
+    <link rel="icon" href="./assets/images/favicon.ico" type="image/x-icon" />
+    <!-- meta -->
+    <meta property="og:url" content="" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="" />
+    <meta property="og:description" content="" />
+    <meta property="og:image" content="" />
+
+    <!-- link custom css page -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./assets/main/css/reset.min.css" />
+    <link rel="stylesheet" href="./assets/main/css/style.min.css" />
+    <!-- end link custom css page -->
+  </head>
+  <body>
+    <!-- cursor -->
+    <svg class="cursor" width="80" height="80" viewBox="0 0 120 120">
+      <defs>
+        <filter
+          id="cursor-filter"
+          x="-50%"
+          y="-50%"
+          width="200%"
+          height="200%"
+          filterUnits="objectBoundingBox"
+        >
+          <feTurbulence
+            type="fractalNoise"
+            baseFrequency="0"
+            numOctaves="1"
+            result="warp"
+          />
+          <feDisplacementMap
+            xChannelSelector="R"
+            yChannelSelector="G"
+            scale="30"
+            in="SourceGraphic"
+          />
+        </filter>
+      </defs>
+      <circle class="cursor__inner" cx="60" cy="60" r="30" />
+    </svg>
+    <!-- end cursor -->
+    <nav class="menu">
+      <a class="menu__item" href="#">Home</a>
+      <a class="menu__item" href="#">Accomodation</a>
+      <a class="menu__item" href="#">Experience</a>
+      <a class="menu__item" href="#">Contact</a>
+    </nav>
+
+    <section class="animation-image">
+      <div class="animation-row">
+        <div class="left"></div>
+        <div class="right">
+          <div class="image clip-img">
+            <img src="./assets/images/11.jpg" alt="" />
+          </div>
+        </div>
+      </div>
+      <div class="animation-row">
+        <div class="right">
+          <div class="image clip-img-reverse">
+            <img src="./assets/images/10.jpg" alt="" />
+          </div>
+        </div>
+        <div class="left"></div>
+      </div>
+    </section>
+    <div class="spacing"></div>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
+
+    <script src="https://unpkg.com/lenis@1.3.4/dist/lenis.min.js"></script>
+    <script type="module" src="./assets/main/js/script.min.js"></script>
+    <script src="./assets/main/js/cursor.min.js"></script>
+  </body>
+</html>
