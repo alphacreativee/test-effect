@@ -1,10 +1,4 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const lenis = new Lenis();
-  lenis.on("scroll", ScrollTrigger.update);
-  gsap.ticker.add((time) => {
-    lenis.raf(time * 1000);
-  });
-  gsap.ticker.lagSmoothing(0);
   //
   gsap.registerPlugin(ScrollTrigger);
   const imgClips = gsap.utils.toArray(".clip-img");
@@ -42,5 +36,8 @@ document.addEventListener("DOMContentLoaded", () => {
         },
       }
     );
+  });
+  window.addEventListener("reload", () => {
+    ScrollTrigger.refresh();
   });
 });
